@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Eje13DatosSqlite.MainPage">
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem Text="Listar" x:Name="toolLista" Order="Primary" Priority="0"   Clicked="toolLista_Clicked"/>
+
+
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Ejercicio 1.3" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Entry Text="{Binding id}" x:Name="txtId" IsVisible="false"/>
+        
+        <Label Text="Nombres" Padding="5,0,5,0" FontSize="16"/>
+        <Entry Text="{Binding nombres}" x:Name="txtNombre"/>
+        
+        <Label Text="Apellidos" Padding="5,0,5,0" FontSize="16"/>
+        <Entry Text="{Binding apellidos}" x:Name="txtApellido"/>
+        
+        <Label Text="Edad" Padding="5,0,5,0" FontSize="16"/>
+        <Entry Text="{Binding edad}" Keyboard="Numeric" x:Name="txtEdad"/>
+        
+        <Label Text="Correo" Padding="5,0,5,0" FontSize="16"/>
+        <Entry Text="{Binding correo}" Keyboard="Email" x:Name="txtEmail"/>
+        
+        <Label Text="Direccion" Padding="5,0,5,0" FontSize="16"/>
+        <Entry Text="{Binding direccion}" x:Name="txtDireccion"/>
+
+        <Button Text="Guardar" x:Name="btnSave" Clicked="btnSave_Clicked"/>
+        <Button Text="Actualizar" x:Name="btnUpdate" Clicked="btnUpdate_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
